@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NeoBank Demo</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div id="notification"></div>
+
+<!-- LOGIN -->
+
+<div id="loginPage" class="login">
+
+<h2>Connexion</h2>
+
+<input id="email" type="email" placeholder="Email">
+
+<input id="password" type="password" placeholder="Mot de passe">
+
+<button id="loginBtn">Se connecter</button>
+
+<p id="error"></p>
+
+</div>
+
+<!-- APP -->
+
+<div id="app" class="container">
+
+<div class="sidebar">
+
+<h2>NeoBank</h2>
+
+<ul>
+
+<li data-page="comptes">Mes comptes</li>
+<li data-page="operations">Transactions</li>
+<li data-page="budget">Analyse</li>
+
+</ul>
+
+</div>
+
+
+<div class="main">
+
+<div class="blocked">
+
+! COMPTE BLOQUÉ
+
+</div>
+
+<!-- COMPTES -->
+
+<div id="comptes" class="page">
+
+<h3>Mes comptes</h3>
+
+<div class="account">
+
+Compte courant : 2804 €
+
+</div>
+
+<div class="account">
+
+Épargne : 12 500 €
+
+</div>
+
+<div class="account">
+
+Crypto : 0.42 BTC
+
+</div>
+
+<p>
+
+IBAN : FR76 3000 6000 0112 3456 7890 189
+
+</p>
+
+<div class="balance">
+
+<span id="balance">2804 €</span>
+
+<button id="toggleBalance">👁</button>
+
+</div>
+
+<!-- CARTE -->
+
+<div class="card" id="card">
+
+<div class="card-inner">
+
+<div class="card-front">
+
+<div class="chip"></div>
+
+<div class="number">
+
+4587 9812 5534 1298
+
+</div>
+
+<div class="name">
+
+JEAN JACQUES
+
+</div>
+
+<div class="visa">
+
+VISA
+
+</div>
+
+</div>
+
+<div class="card-back">
+
+<div class="stripe"></div>
+
+<div class="cvv">
+
+CVV 843
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- TRANSACTIONS -->
+
+<div id="operations" class="page">
+
+<h3>Transactions</h3>
+
+<div id="transactions"></div>
+
+</div>
+
+<!-- BUDGET -->
+
+<div id="budget" class="page">
+
+<h3>Dépenses</h3>
+
+<canvas id="chart"></canvas>
+
+<p id="ai"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
